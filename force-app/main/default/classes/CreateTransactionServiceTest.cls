@@ -22,6 +22,9 @@ private class CreateTransactionServiceTest {
 
     }
     static testmethod void positiveDebit(){
+        FinServ__FinancialAccount__c fsAcc = [Select FinServ__FinancialAccountNumber__c from FinServ__FinancialAccount__c ] ;
+        fsAcc.FinServ__FinancialAccountNumber__c = '12345';
+        Update fsAcc;
         CreateTransactionService.CreateTranReqClass tranReq = new CreateTransactionService.CreateTranReqClass();
         
         tranReq.FinancialAccount = '12345';

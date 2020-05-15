@@ -108,6 +108,10 @@ global with sharing class CreateTransactionService {
                  			  createTranResp.errorReason  = 'Insufficient Funds';
                            }Else{
                                
+                               if (string.isBlank(string.valueof(accList[0].FinServ__Balance__c))){
+                                   accList[0].FinServ__Balance__c = 0.00;
+                               }
+                               
                                if(formatedReq.TransactionType == 'Debit'){
                                    accList[0].FinServ__Balance__c -= formatedReq.Amount; 
                                }else{
