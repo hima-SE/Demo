@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This platform event will trigger a callout to back systems to provision the account.This functionality can be expanded to update information as well by creating a field that will determine the type of operation. also middleware can listen to this platform event perform the necessary operations.</description>
+    <eventType>HighVolume</eventType>
+    <label>Account Provisioning</label>
+    <pluralLabel>Account Provisionings</pluralLabel>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
+</CustomObject>

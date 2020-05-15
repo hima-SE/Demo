@@ -1,0 +1,17 @@
+{
+  "orgName": "ANZx assignment",
+  "edition": "Developer",
+  "features": ["API","PersonAccounts","ContactsToMultipleAccounts","FinancialServicesUser:5", "ServiceCloud","ServiceUser","SalesUser","LightningSalesConsole","LightningServiceConsole"],
+  "settings": {
+  "accountSettings":{
+    "enableAccountHistoryTracking": true,     
+    "enableContactHistoryTracking": true, 
+    "enableRelateContactToMultipleAccounts": true, 
+    "showViewHierarchyLink": true
+   },
+   "nameSettings":{
+		"enableMiddleName": true,
+		"enableNameSuffix": true
+   }
+  }
+}
