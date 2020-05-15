@@ -102,15 +102,15 @@ global with sharing class CreateTransactionService {
                  		createTranResp.responseCode = 1;
                  		createTranResp.errorReason  = 'Cannot Process Transaction on this account';
                     }ELSE{
+                        if (string.isBlank(string.valueof(accList[0].FinServ__Balance__c))){
+                            accList[0].FinServ__Balance__c = 0.00;
+                        }
+                        
                         IF(formatedReq.TransactionType == 'Debit' && formatedReq.Amount > accList[0].FinServ__Balance__c ){
                               createTranResp.status 	  = 'ERROR';
                  			  createTranResp.responseCode = 1;
                  			  createTranResp.errorReason  = 'Insufficient Funds';
                            }Else{
-                               
-                               if (string.isBlank(string.valueof(accList[0].FinServ__Balance__c))){
-                                   accList[0].FinServ__Balance__c = 0.00;
-                               }
                                
                                if(formatedReq.TransactionType == 'Debit'){
                                    accList[0].FinServ__Balance__c -= formatedReq.Amount; 
