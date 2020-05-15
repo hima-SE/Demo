@@ -70,7 +70,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>FinServ__FinancialAccount__c.FinServ__CreditCard</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
